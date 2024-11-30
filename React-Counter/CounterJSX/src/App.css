@@ -1,0 +1,164 @@
+@import url('https://fonts.cdnfonts.com/css/digital-numbers');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  font-family: 'Digital Numbers';
+  background-image:linear-gradient(rgba(0, 0, 0, 0.384),rgba(0, 0, 0, 0.384)),url('https://img.freepik.com/free-vector/3d-explosion-with-light-background_52683-20661.jpg');
+  width:100%;
+  height:800px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  color:white;
+  text-shadow: 2px 2px black;
+}
+
+
+
+
+
+
+
+/* CSS */
+.button-12 {
+  touch-action: manipulation;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 8px;
+  height: 65px;
+  padding: 12px;
+  border-radius: 15px 15px 12px 12px;
+  cursor: pointer;
+  margin: auto;
+  position: relative;
+  will-change: transform;
+  transition: all .1s ease-in-out 0s;
+  user-select: none;
+  /* Add gradient shading to each side */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-position: bottom right, bottom right;
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: inset -4px -10px 0px rgba(255, 255, 255, 0.4),
+    inset -4px -8px 0px rgba(0, 0, 0, 0.3),
+    0px 2px 1px rgba(0, 0, 0, 0.3),
+    0px 2px 1px rgba(255, 255, 255, 0.1);
+  transform: perspective(70px) rotateX(5deg) rotateY(0deg);
+  margin:10px 20px;
+}
+
+.button-12::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+  z-index: -1;
+  border-radius: 15px;
+  box-shadow: inset 4px 0px 0px rgba(255, 255, 255, 0.1),
+    inset 4px -8px 0px rgba(0, 0, 0, 0.3);
+  transition: all .1s ease-in-out 0s;
+}
+
+.button-12::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-position: bottom right, bottom right;
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  border-radius: 15px;
+  transition: all .1s ease-in-out 0s;
+}
+
+.button-12:active {
+  will-change: transform;
+  transform: perspective(80px) rotateX(5deg) rotateY(1deg) translateY(3px) scale(0.96);
+  height: 64px;
+  border: 0.25px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset -4px -8px 0px rgba(255, 255, 255, 0.2),
+    inset -4px -6px 0px rgba(0, 0, 0, 0.8),
+    0px 1px 0px rgba(0, 0, 0, 0.9),
+    0px 1px 0px rgba(255, 255, 255, 0.2);
+  transition: all .1s ease-in-out 0s;
+}
+
+.button-12::after:active {
+  background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2));
+}
+
+.button-12:active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  width: 50%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: overlay-12 0.1s ease-in-out 0s;
+  pointer-events: none;
+}
+
+.button-12 svg {
+  width: 15px;
+  height: 15px;
+}
+
+@keyframes overlay-12 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.button-12:focus {
+  outline: none;
+}
